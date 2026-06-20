@@ -1,0 +1,735 @@
+PROJECT NAME
+
+OTPVerify Pro
+
+
+---
+
+PROJECT SUMMARY
+
+Build a complete SaaS platform where users can register, fund wallets, purchase digital services, manage orders, earn referral commissions, contact support, and withdraw unused wallet balances back to their verified bank accounts.
+
+The system must support:
+
+User accounts
+
+Wallet system
+
+Deposits
+
+Withdrawals
+
+Orders
+
+Refunds
+
+Referrals
+
+Notifications
+
+KYC verification
+
+Admin management
+
+Reporting and analytics
+
+
+The platform must be mobile-first and production-ready.
+
+
+---
+
+USER FEATURES
+
+Registration
+
+Required:
+
+First Name
+
+Last Name
+
+Username
+
+Email
+
+Phone Number
+
+Password
+
+Confirm Password
+
+Referral Code (Optional)
+
+
+System Automatically:
+
+Creates Wallet
+
+Generates Referral Link
+
+Sends Welcome Email
+
+
+
+---
+
+Login
+
+Allow:
+
+Email Login
+
+Username Login
+
+
+Include:
+
+Remember Me
+
+Password Reset
+
+Email Verification
+
+
+
+---
+
+USER DASHBOARD
+
+Display:
+
+Wallet Card
+
+Show:
+
+Available Balance
+
+Total Deposits
+
+Total Withdrawals
+
+Total Spending
+
+
+Buttons:
+
+Fund Wallet
+
+Withdraw Funds
+
+
+
+---
+
+Statistics
+
+Show:
+
+Total Orders
+
+Active Orders
+
+Completed Orders
+
+Referral Earnings
+
+
+
+---
+
+Recent Activities
+
+Show:
+
+Deposits
+
+Withdrawals
+
+Purchases
+
+Refunds
+
+
+
+---
+
+WALLET SYSTEM
+
+Fund Wallet
+
+Methods:
+
+Paystack
+
+Flutterwave
+
+Monnify
+
+Bank Transfer
+
+
+Flow:
+
+User Selects Amount
+
+↓
+
+Payment Gateway
+
+↓
+
+Webhook Verification
+
+↓
+
+Wallet Credited
+
+↓
+
+Transaction Logged
+
+
+---
+
+Withdraw Wallet Funds
+
+Users can withdraw unused balances.
+
+Requirements:
+
+KYC Verified
+
+Valid Bank Account
+
+Minimum Withdrawal Amount
+
+
+Withdrawal Status:
+
+Pending
+
+Approved
+
+Processing
+
+Paid
+
+Rejected
+
+
+Supported Banks:
+
+All Nigerian Banks
+
+
+Automatic Transfer Through:
+
+Paystack Transfers
+
+Flutterwave Transfers
+
+Monnify Disbursement
+
+
+
+---
+
+REFUND SYSTEM
+
+If order fails:
+
+Automatically:
+
+Refund User Wallet
+
+Create Refund Record
+
+Send Notification
+
+
+If user wants to leave platform:
+
+Allow:
+
+Withdrawal of unused balance
+
+
+
+---
+
+BANK ACCOUNT MANAGEMENT
+
+Users can:
+
+Add Bank Account
+
+Remove Bank Account
+
+Set Default Account
+
+
+Store:
+
+Bank Name
+
+Bank Code
+
+Account Number
+
+Account Name
+
+
+Verify Account Automatically
+
+
+---
+
+KYC SYSTEM
+
+Level 1
+
+Name
+
+Email
+
+Phone
+
+
+Level 2
+
+National ID
+
+Driver License
+
+Passport
+
+
+Level 3
+
+Utility Bill
+
+Proof of Address
+
+
+Without KYC:
+
+Withdrawal Disabled
+
+
+---
+
+REFERRAL SYSTEM
+
+Each User Receives:
+
+Referral Code Example:
+
+KORAL123
+
+Referral Link Example:
+
+https://otpverify.com/register?ref=KORAL123
+
+Admin Can Set:
+
+Commission Percentage
+
+Bonus Amount
+
+
+
+---
+
+SUPPORT SYSTEM
+
+Users Can:
+
+Open Ticket
+
+View Replies
+
+Upload Attachments
+
+Close Ticket
+
+
+Ticket Fields:
+
+Subject
+
+Category
+
+Priority
+
+Message
+
+
+
+---
+
+NOTIFICATION SYSTEM
+
+In-App Notifications
+
+Send For:
+
+Deposit Success
+
+Withdrawal Success
+
+Purchase Success
+
+Refund
+
+Support Reply
+
+
+Email Notifications
+
+Send For:
+
+Registration
+
+Login Alert
+
+Withdrawal Alert
+
+Password Reset
+
+
+
+---
+
+ORDER MANAGEMENT
+
+Each Order Stores:
+
+Order ID
+
+User
+
+Service
+
+Country
+
+Price
+
+Status
+
+
+Statuses:
+
+Pending
+
+Processing
+
+Completed
+
+Failed
+
+Refunded
+
+Cancelled
+
+
+
+---
+
+ADMIN DASHBOARD
+
+Analytics
+
+Display:
+
+Total Users
+
+Active Users
+
+Revenue
+
+Deposits
+
+Withdrawals
+
+Orders
+
+Refunds
+
+
+Charts:
+
+Daily Revenue
+
+Monthly Revenue
+
+User Growth
+
+
+
+---
+
+User Management
+
+Admin Can:
+
+View Users
+
+Suspend Users
+
+Activate Users
+
+Credit Wallet
+
+Debit Wallet
+
+
+
+---
+
+Wallet Management
+
+Admin Can:
+
+View Transactions
+
+Reverse Transactions
+
+Approve Withdrawals
+
+Export Reports
+
+
+
+---
+
+KYC Management
+
+Admin Can:
+
+Approve KYC
+
+Reject KYC
+
+Request Re-submission
+
+
+
+---
+
+Referral Management
+
+Admin Can:
+
+Change Commission Rate
+
+View Referral Earnings
+
+Disable Referrals
+
+
+
+---
+
+Support Management
+
+Admin Can:
+
+View Tickets
+
+Reply Tickets
+
+Close Tickets
+
+
+
+---
+
+DATABASE TABLES
+
+users
+wallets
+transactions
+bank_accounts
+withdrawals
+withdrawal_logs
+services
+countries
+orders
+order_logs
+referrals
+referral_earnings
+support_tickets
+support_replies
+notifications
+payment_logs
+kyc_documents
+admins
+roles
+permissions
+audit_logs
+settings
+
+
+---
+
+TECHNOLOGY STACK
+
+Frontend:
+
+Next.js
+
+React
+
+TailwindCSS
+
+TypeScript
+
+
+Backend:
+
+Laravel 12
+
+
+Database:
+
+MySQL 8
+
+
+Cache:
+
+Redis
+
+
+Queue:
+
+Laravel Horizon
+
+
+Authentication:
+
+Laravel Sanctum
+
+
+Storage:
+
+Cloudflare R2
+
+AWS S3
+
+
+Payments:
+
+Paystack
+
+Flutterwave
+
+Monnify
+
+
+Server:
+
+Ubuntu
+
+Nginx
+
+Docker
+
+
+
+---
+
+SECURITY
+
+Implement:
+
+HTTPS
+
+CSRF Protection
+
+SQL Injection Protection
+
+Rate Limiting
+
+Password Hashing
+
+2FA Authentication
+
+Session Management
+
+Audit Logging
+
+
+
+---
+
+DESIGN
+
+Theme:
+
+Purple Gradient
+
+Pink Accent
+
+White Background
+
+
+Layout:
+
+Mobile First
+
+Responsive
+
+Modern Fintech Style
+
+
+Bottom Navigation:
+
+Home
+
+Orders
+
+Referrals
+
+Support
+
+Profile
+
+
+Features:
+
+Dark Mode
+
+Rounded Cards
+
+Dashboard Widgets
+
+Smooth Animations
+
+
+
+---
+
+BUSINESS RULES
+
+Every user gets a wallet.
+
+Failed orders are refunded automatically.
+
+Users can withdraw unused wallet funds.
+
+KYC is required before withdrawals.
+
+Referral commissions are automated.
+
+All transactions are permanently logged.
+
+Admin actions are audited.
+
+Email and in-app notifications are mandatory.
+
+
+
+---
+
+Goal: Build a production-ready fintech-style SaaS platform with wallet funding, withdrawals, referrals, support, analytics, and complete user/admin management.
